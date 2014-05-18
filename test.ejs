@@ -1,0 +1,73 @@
+ Skip to content
+
+    Explore
+    Gist
+    Blog
+    Help
+
+    an3s an3s
+
+    6
+    0
+    0
+
+public INF1B/Awareness-Test
+
+Awareness-Test / views / questions.ejs
+Martijn Buurman m19 Friday at 11:14am
+Added answers count and several other fixes
+
+1 contributor
+file 36 lines (33 sloc) 1.295 kb
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 	
+
+<% block('title', 'Questions - Awareness Test') %>
+
+<div class="container" id="main" data-session=<%- session %>>
+<div class="row">
+<div class="col-md-12">
+<h1>Be Aware</h1>
+</div>
+</div>
+<div class="row">
+        <div class="col-md-8" id="startSessionDiv">
+            <h3>Start</h3>
+            <button type="button" id="startSession" class="btn btn-primary btn-lg btn-block">Start Session</button>
+        </div>
+<div class="col-md-8 question">
+<h3>Question</h3>
+<p id="currentQuestion"></p>
+<ul class="answer" id="answers"></ul>
+</div>
+<div class="col-md-4">
+<h3 class="lead">Session Pin <strong><%- session %></strong></h3>
+            <p>Go to <a href="127.0.0.1:1337">127.0.0.1:1337</a> and enter this pin.</p>
+<button type="button" id="nextQuestion" class="btn btn-primary btn-lg btn-block question">Next Question</button>
+
+            <div id="usersDiv">
+                <h3>Total Users</h3>
+                <p><span class="amountOfUsers"></span></p>
+            </div>
+            <div class="answer">
+                <h3>Total Answers</h3>
+                <p><span id="amountOfResults"></span> / <span class="amountOfUsers"></span></p>
+            </div>
+</div>
+</div>
+</div>
+
+<% block('scripts', '<script src="/js/scripts/question.js"></script>') %>
+
+    Status
+    API
+    Training
+    Shop
+    Blog
+    About
+
+    © 2014 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Contact
+
